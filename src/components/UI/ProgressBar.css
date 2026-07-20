@@ -1,0 +1,33 @@
+.progress{
+
+width:420px;
+height:16px;
+
+background:#222;
+
+border-radius:30px;
+
+overflow:hidden;
+
+box-shadow:0 0 20px rgba(255,255,255,.15);
+
+}
+
+.progress-fill{
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+#ff00cc,
+#8f00ff,
+#00e1ff
+);
+
+transition:width .15s linear;
+
+box-shadow:
+0 0 20px #ff00cc,
+0 0 40px #00e1ff;
+
+}

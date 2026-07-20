@@ -1,0 +1,53 @@
+.intro-content{
+
+    position:relative;
+    z-index:10;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    gap:35px;
+
+    padding:60px 70px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:30px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.45);
+
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+@media (max-width:768px){
+
+.intro-content{
+
+    width:90%;
+
+    padding:35px 25px;
+
+}
+
+}

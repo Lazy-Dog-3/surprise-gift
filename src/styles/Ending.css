@@ -1,0 +1,873 @@
+/* ==========================
+   ROMANTIC NIGHT SKY
+========================== */
+
+.ending-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at 20% 20%, #8d45ff55, transparent 35%),
+                radial-gradient(circle at 80% 80%, #ff5ba055, transparent 35%),
+                radial-gradient(circle at center, #30104f, #090014);
+    background-size: 200% 200%;
+    animation: nebulaMove 28s ease infinite;
+}
+
+/* ==========================
+      SKY & FLOATING EFFECTS
+========================== */
+
+.stars {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image: radial-gradient(2px 2px at 10% 20%, white, transparent),
+                      radial-gradient(2px 2px at 25% 80%, white, transparent),
+                      radial-gradient(1px 1px at 40% 40%, white, transparent),
+                      radial-gradient(2px 2px at 60% 15%, white, transparent),
+                      radial-gradient(2px 2px at 70% 65%, white, transparent);
+    animation: twinkle 4.5s ease-in-out infinite;
+}
+
+.twinkling {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: radial-gradient(circle at center, rgba(255,150,220,.2), transparent 65%);
+}
+
+/* Floating Hearts, Sparkles, Petals, Fireflies */
+.floating-hearts, .sparkles, .petals, .fireflies, .shooting-stars {
+    position: absolute;
+    z-index: 5;
+}
+
+/* ==========================
+      MAIN CONTENT
+========================== */
+
+.ending-content {
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    width: 92%;
+    max-width: 820px;
+}
+
+/* ==========================
+        PREMIUM HEART
+========================== */
+
+.heart-container{
+
+    position:relative;
+
+    width:220px;
+    height:220px;
+
+    margin:70px auto 55px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:30;
+
+}
+
+/* -------------------------
+        GLOW
+-------------------------- */
+
+.heart-glow{
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+        rgba(255,120,180,.95),
+        rgba(255,70,140,.45),
+        transparent 72%);
+
+    filter:blur(38px);
+
+    animation:heartGlow 1.45s ease-in-out infinite;
+
+}
+
+/* -------------------------
+        HEART
+-------------------------- */
+
+.heart-front{
+
+    position:relative;
+
+    font-size:110px;
+
+    line-height:1;
+
+    z-index:40;
+
+    user-select:none;
+
+    animation:heartBeat 1.45s ease-in-out infinite;
+
+    transform-origin:center;
+
+    filter:
+
+    drop-shadow(0 0 10px #ff88bd)
+    drop-shadow(0 0 28px #ff5e9f)
+    drop-shadow(0 0 55px rgba(255,80,150,.85));
+
+}
+
+/* -------------------------
+        SPARKLES
+-------------------------- */
+
+.heart-sparkles{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:45;
+
+}
+
+.heart-sparkles span{
+
+    position:absolute;
+
+    font-size:20px;
+
+    animation:orbit 4s ease-in-out infinite;
+
+    filter:drop-shadow(0 0 10px white);
+
+}
+
+.heart-sparkles span:nth-child(1){
+
+top:12%;
+left:50%;
+
+animation-delay:0s;
+
+}
+
+.heart-sparkles span:nth-child(2){
+
+left:18%;
+top:42%;
+
+animation-delay:.7s;
+
+}
+
+.heart-sparkles span:nth-child(3){
+
+right:18%;
+top:42%;
+
+animation-delay:1.4s;
+
+}
+
+.heart-sparkles span:nth-child(4){
+
+bottom:18%;
+left:34%;
+
+animation-delay:2.1s;
+
+}
+
+.heart-sparkles span:nth-child(5){
+
+bottom:18%;
+right:34%;
+
+animation-delay:2.8s;
+
+}
+
+/* -------------------------
+      PULSE RINGS
+-------------------------- */
+
+.pulse-ring{
+
+    position:absolute;
+
+    width:130px;
+    height:130px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,150,210,.6);
+
+    animation:ring 3s linear infinite;
+
+}
+
+.ring2{
+
+    animation-delay:1.5s;
+
+}
+
+
+
+/* ==========================
+      TITLES
+========================== */
+
+.title {
+    color: white;
+    font-size: 3.8rem;
+    margin: 10px 0 18px;
+    text-shadow: 0 0 30px #ff78d1;
+}
+
+.subtitle {
+    color: #ffd7ef;
+    margin-bottom: 35px;
+    line-height: 1.75;
+    font-size: 1.28rem;
+}
+
+/* ==========================
+      ROMANTIC MESSAGE
+========================== */
+
+.romantic-message {
+    color: #fff;
+    font-size: 1.24rem;
+    line-height: 2.1;
+    text-align: left;
+    max-width: 680px;
+    margin: 40px auto;
+    padding: 45px 40px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 28px;
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+    backdrop-filter: blur(16px);
+    position: relative;
+    z-index: 25;
+}
+
+.romantic-message::before {
+    content: '💕';
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+}
+
+/* ==========================
+      FINALE
+========================== */
+
+.finale {
+    margin-top: 55px;
+    z-index: 25;
+}
+
+.quote {
+    margin-top: 22px;
+    color: #ffd7ef;
+    font-size: 1.35rem;
+    font-style: italic;
+}
+
+.replay-btn {
+    margin: 55px auto 40px;
+    padding: 19px 48px;
+    border: none;
+    border-radius: 60px;
+    background: linear-gradient(135deg, #ff4d8d, #ff79c6);
+    color: white;
+    font-size: 1.18rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 18px 40px rgba(255,77,141,.45);
+    z-index: 30;
+}
+
+.replay-btn:hover {
+    transform: translateY(-7px) scale(1.07);
+    box-shadow: 0 25px 60px rgba(255,77,141,.65);
+}
+
+/* ===========================
+        SPARKLES CONTINUOUS RAIN
+=========================== */
+
+.sparkles {
+    position: absolute;
+    inset: 0;
+    z-index: 8;
+    pointer-events: none;
+}
+
+.sparkles span {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 14px #fff, 0 0 26px #ff9ed2;
+    animation: sparkleFall linear infinite;
+}
+
+/* Faster and continuous */
+.sparkles span:nth-child(1) { left: 10%; animation-duration: 3.2s; animation-delay: 0s; }
+.sparkles span:nth-child(2) { left: 25%; animation-duration: 4.1s; animation-delay: -1.2s; }
+.sparkles span:nth-child(3) { left: 38%; animation-duration: 2.8s; animation-delay: -0.6s; }
+.sparkles span:nth-child(4) { left: 55%; animation-duration: 3.7s; animation-delay: -2.3s; }
+.sparkles span:nth-child(5) { left: 68%; animation-duration: 4.5s; animation-delay: -1.8s; }
+.sparkles span:nth-child(6) { left: 80%; animation-duration: 3.4s; animation-delay: -0.9s; }
+.sparkles span:nth-child(7) { left: 15%; animation-duration: 3.9s; animation-delay: -2.7s; }
+.sparkles span:nth-child(8) { left: 45%; animation-duration: 2.6s; animation-delay: -1.5s; }
+
+@keyframes sparkleFall {
+    0% {
+        transform: translateY(-120px) scale(0.5);
+        opacity: 0;
+    }
+    15% { opacity: 1; }
+    100% {
+        transform: translateY(105vh) scale(1.3);
+        opacity: 0;
+    }
+}
+
+/* ===========================
+        PETALS CONTINUOUS RAIN
+=========================== */
+
+.petals {
+    position: absolute;
+    inset: 0;
+    z-index: 7;
+    pointer-events: none;
+}
+
+.petals span {
+    position: absolute;
+    top: -100px;
+    font-size: 35px;
+    animation: petalFall linear infinite;
+    opacity: 0.9;
+}
+
+/* Continuous falling */
+.petals span:nth-child(1) { left: 12%; animation-duration: 14s; animation-delay: 0s; }
+.petals span:nth-child(2) { left: 24%; animation-duration: 17s; animation-delay: -3s; }
+.petals span:nth-child(3) { left: 35%; animation-duration: 12s; animation-delay: -6s; }
+.petals span:nth-child(4) { left: 52%; animation-duration: 15s; animation-delay: -2s; }
+.petals span:nth-child(5) { left: 67%; animation-duration: 13s; animation-delay: -8s; }
+.petals span:nth-child(6) { left: 78%; animation-duration: 16s; animation-delay: -4s; }
+.petals span:nth-child(7) { left: 88%; animation-duration: 11s; animation-delay: -1s; }
+.petals span:nth-child(8) { left: 18%; animation-duration: 18s; animation-delay: -7s; }
+
+@keyframes petalFall {
+    0% {
+        transform: translateY(-120px) rotate(0deg);
+        opacity: 0;
+    }
+    10% { opacity: 0.95; }
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* ==========================
+      SHOOTING STARS
+========================== */
+
+.shooting-stars{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:4;
+}
+
+.shooting-stars span{
+    position:absolute;
+    width:180px;
+    height:2px;
+    background:linear-gradient(to right,#fff,transparent);
+    border-radius:50px;
+    opacity:.9;
+    transform:rotate(-35deg);
+
+    animation:shoot 8s linear infinite;
+}
+
+.shooting-stars span:nth-child(1){
+    top:12%;
+    left:-220px;
+    animation-delay:0s;
+}
+
+.shooting-stars span:nth-child(2){
+    top:38%;
+    left:-260px;
+    animation-delay:2.8s;
+}
+
+.shooting-stars span:nth-child(3){
+    top:65%;
+    left:-240px;
+    animation-delay:5.6s;
+}
+
+@keyframes shoot{
+
+0%{
+transform:translateX(0) translateY(0) rotate(-35deg);
+opacity:0;
+}
+
+5%{
+opacity:1;
+}
+
+100%{
+transform:translateX(1700px) translateY(450px) rotate(-35deg);
+opacity:0;
+}
+
+}
+
+/* ==========================
+        FIREFLIES
+========================== */
+
+.fireflies{
+
+position:absolute;
+inset:0;
+pointer-events:none;
+z-index:9;
+
+}
+
+.fireflies span{
+
+position:absolute;
+
+width:8px;
+height:8px;
+
+border-radius:50%;
+
+background:#fff7b0;
+
+box-shadow:
+0 0 12px #fff6b0,
+0 0 25px #ffd966;
+
+animation:firefly 7s ease-in-out infinite;
+
+}
+
+.fireflies span:nth-child(1){top:20%;left:15%;animation-delay:0s;}
+.fireflies span:nth-child(2){top:35%;left:82%;animation-delay:1s;}
+.fireflies span:nth-child(3){top:68%;left:30%;animation-delay:2s;}
+.fireflies span:nth-child(4){top:58%;left:72%;animation-delay:3s;}
+.fireflies span:nth-child(5){top:82%;left:55%;animation-delay:4s;}
+
+@keyframes firefly{
+
+0%,100%{
+
+transform:translate(0,0);
+
+opacity:.2;
+
+}
+
+25%{
+
+transform:translate(20px,-35px);
+
+opacity:1;
+
+}
+
+50%{
+
+transform:translate(-18px,22px);
+
+opacity:.5;
+
+}
+
+75%{
+
+transform:translate(12px,-18px);
+
+opacity:.9;
+
+}
+
+}
+
+
+/* ==========================
+      FLOATING HEARTS
+========================== */
+
+.floating-hearts{
+
+position:absolute;
+inset:0;
+pointer-events:none;
+z-index:6;
+
+}
+
+.floating-hearts span{
+
+position:absolute;
+
+font-size:24px;
+
+animation:floatHeart linear infinite;
+
+opacity:.85;
+
+}
+
+.floating-hearts span:nth-child(1){left:8%;animation-duration:11s;}
+.floating-hearts span:nth-child(2){left:24%;animation-duration:13s;}
+.floating-hearts span:nth-child(3){left:42%;animation-duration:10s;}
+.floating-hearts span:nth-child(4){left:60%;animation-duration:14s;}
+.floating-hearts span:nth-child(5){left:78%;animation-duration:12s;}
+.floating-hearts span:nth-child(6){left:90%;animation-duration:15s;}
+
+@keyframes floatHeart{
+
+0%{
+
+transform:translateY(105vh) scale(.7);
+
+opacity:0;
+
+}
+
+10%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-140px) scale(1.2);
+
+opacity:0;
+
+}
+
+}
+
+
+@keyframes heartSpark{
+
+0%,100%{
+
+opacity:.3;
+
+transform:scale(.6);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:scale(1.35);
+
+}
+
+}
+
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+@keyframes nebulaMove {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.65; }
+    50% { opacity: 1; }
+}
+
+@keyframes heartBeat{
+
+0%{
+transform:scale(1);
+}
+
+8%{
+transform:scale(1.08);
+}
+
+16%{
+transform:scale(.96);
+}
+
+28%{
+transform:scale(1.16);
+}
+
+40%{
+transform:scale(1);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+@keyframes heartGlow{
+
+0%{
+
+transform:scale(.88);
+
+opacity:.45;
+
+}
+
+8%{
+
+transform:scale(1.03);
+
+opacity:.9;
+
+}
+
+16%{
+
+transform:scale(.92);
+
+opacity:.55;
+
+}
+
+28%{
+
+transform:scale(1.18);
+
+opacity:1;
+
+}
+
+40%{
+
+transform:scale(.95);
+
+opacity:.55;
+
+}
+
+100%{
+
+transform:scale(.88);
+
+opacity:.45;
+
+}
+
+}
+
+.pulse-ring{
+
+position:absolute;
+
+width:145px;
+height:145px;
+
+border-radius:50%;
+
+border:3px solid rgba(255,130,190,.65);
+
+animation:ring 3s linear infinite;
+
+}
+
+.ring2{
+
+animation-delay:1.5s;
+
+}
+
+@keyframes ring{
+
+0%{
+
+transform:scale(.7);
+
+opacity:.8;
+
+}
+
+100%{
+
+transform:scale(2.6);
+
+opacity:0;
+
+}
+
+}
+
+/* =========================================
+      CINEMATIC REPLAY
+========================================= */
+
+.fade-away{
+    animation: fadeAway 6s forwards;
+}
+
+@keyframes fadeAway{
+
+0%{
+    opacity:1;
+    transform:scale(1);
+    filter:blur(0px);
+}
+
+70%{
+    opacity:.5;
+}
+
+100%{
+    opacity:0;
+    transform:scale(.94);
+    filter:blur(6px);
+}
+
+}
+
+.ending-page.replaying{
+
+animation:screenFade 4s forwards;
+animation-delay:16s;
+
+}
+
+@keyframes screenFade{
+
+0%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+}
+
+}
+/* =====================================
+      FINAL LOVE MESSAGE
+===================================== */
+
+.love-final-message{
+    text-align:center;
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(.5);
+
+    width: 90%;
+    max-width: 900px;
+
+    text-align: center;
+
+    font-size: clamp(2.5rem, 9vw, 8rem);
+
+    font-weight: 900;
+
+    font-family: 'Poppins', sans-serif;
+
+    line-height: 1.15;
+
+    letter-spacing: clamp(2px, 0.8vw, 6px);
+
+    color: #fff;
+
+    text-shadow:
+        0 0 15px #ff5ba0,
+        0 0 35px #ff5ba0,
+        0 0 60px #ff4d8d,
+        0 0 120px #ff4d8d,
+        0 0 180px #ff80bf;
+
+    opacity: 0;
+
+    z-index: 10000;
+
+    pointer-events: none;
+
+    animation: loveReveal 21s forwards;
+}
+
+/* =============================== */
+
+@keyframes loveReveal{
+
+    0%,50%{
+        opacity:0;
+        transform:translate(-50%,-50%) scale(.5);
+    }
+
+    58%{
+        opacity:1;
+        transform:translate(-50%,-50%) scale(1.15);
+    }
+
+    90%{
+        opacity:1;
+        transform:translate(-50%,-50%) scale(1);
+    }
+
+    97%{
+        opacity:1;
+        transform:translate(-50%,-50%) scale(1);
+    }
+
+    100%{
+        opacity:0;
+        transform:translate(-50%,-50%) scale(1.05);
+    }
+
+}

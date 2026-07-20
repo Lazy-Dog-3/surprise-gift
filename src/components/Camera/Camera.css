@@ -1,0 +1,91 @@
+.camera {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    transition: transform 1.5s ease;
+
+    background: radial-gradient(circle at top, #2a0d4d, #0b0715 60%, black);
+}
+
+.camera-zoom{
+
+transform:scale(1.25);
+
+}
+
+.camera-shake{
+
+animation:cameraShake .4s;
+
+}
+
+.camera-flash{
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:white;
+
+pointer-events:none;
+
+animation:flash .4s forwards;
+
+}
+
+@keyframes flash{
+
+0%{
+opacity:0;
+}
+
+40%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+}
+
+}
+
+@keyframes cameraShake{
+
+0%{
+transform:translate(0,0);
+}
+
+20%{
+transform:translate(-8px,5px);
+}
+
+40%{
+transform:translate(8px,-5px);
+}
+
+60%{
+transform:translate(-5px,4px);
+}
+
+80%{
+transform:translate(5px,-4px);
+}
+
+100%{
+transform:translate(0,0);
+}
+
+}
