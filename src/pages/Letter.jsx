@@ -50,7 +50,7 @@ I hope life always reminds you of something I never want you to forget that you 
 
   return (
     <div className="letter-page">
-      <Title>❤️🫶🫶❤️ <br /> For Hajur <br /> ❤️🫶🫶❤️</Title>
+      <Title>❤️🫶❤️ <br /> For Hajur <br /> ❤️🫶❤️</Title>
 
       {!opened ? (
         <div className="envelope-container" onClick={handleEnvelopeClick}>

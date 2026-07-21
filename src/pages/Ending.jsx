@@ -93,10 +93,11 @@ function Ending({ restart }) {
             You look gorgeous every single time hernu chai sakdina but yet i see asu aai halxa idk why 😂 Hajur shine so bright tesaile may be. <br /> <br />
             Euta kura 😅 hajur is the reason myle notification on garey 😂 natra mute ma hunthyo ani phone ni silent 😅. 
             Matlab notification auda yesto khusi 😁. <br /> <br />
+            Hajur ta sachai really amazing yrr mata k vannu tyo sano phone ko icon ma yeti ramro dekhinu hunxa jhan real mata k hola. Hajur kati innocent hununxa vaney ni 🥹 Kati pyaro, kina vaney maan bata nai pure gem 💎 hununxa hajur 💐. Hajur Dherai mathi hununxa matlab sab vanda mathi top ma 👑. <br /> <br />
             Ani Hajur bata dherai chij sikyo throughout the time i have improved a lot. Thanks to you ❤️ Hajur is best. 🫡 <br /> <br />
             Ahh ajai kura lekhnu vanda ni hajur ko bare ajai hajur batai jannu thyo 👑. Tahxa hajur kasaima belive garnu hunna but 
             I hope Hajur will give me a chance, please. Ughh i am so bad at asking 😥. Tara Hajur, the main point is I am here to listen anything anytime no matter what ✨. <br /> <br />
-            From my side, No complaints, No Demands. 🤗
+            And from my side, No complaints, No Demands. 🤗
 
 
           </p>
